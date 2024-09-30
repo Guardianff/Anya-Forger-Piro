@@ -492,3 +492,12 @@ async def send_all(bot, userid, files, ident):
             caption=f_caption,
             protect_content=True if ident == "filep" else False,
             reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ BOT UPDATES ⚔️', url="https://t.me/ckflicks") ] ] ))
+
+def get_readable_time(seconds):
+    periods = [('d', 86400), ('h', 3600), ('m', 60), ('s', 1)]
+    result = ''
+    for period_name, period_seconds in periods:
+        if seconds >= period_seconds:
+            period_value, seconds = divmod(seconds, period_seconds)
+            result += f'{int(period_value)}{period_name}'
+    return result
