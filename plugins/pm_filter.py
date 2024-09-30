@@ -1140,6 +1140,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         free = 536870912 - monsize
         monsize = get_size(monsize)
         free = get_size(free)
+        uptime = get_readable_time(time_now() - temp.START_TIME)
         await query.message.edit_text(
             text=script.STATUS_TXT.format(total, users, chats, monsize, free, uptime),
             reply_markup=reply_markup,
