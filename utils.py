@@ -490,7 +490,7 @@ async def send_all(bot, userid, files, ident):
             file_id=file.file_id,
             caption=f_caption,
             protect_content=True if ident == "filep" else False,
-            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ 𝗕𝗢𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚔️', url="https://t.me/am_films) ] ] ))
+            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ 𝗕𝗢𝗧 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚔️', url="https://t.me/am_films") ] ] ))
 
 def get_readable_time(seconds):
     periods = [('d', 86400), ('h', 3600), ('m', 60), ('s', 1)]
