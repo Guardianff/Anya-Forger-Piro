@@ -1259,7 +1259,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     
 async def auto_filter(client, msg, spoll=False):
-    reqstr1 = msg.from_user.id if msg.from_user else 0
+    reqstr1 = msg.from_user.id if msg.from_user else None
     reqstr = await client.get_users(reqstr1)
     if not spoll:
         message = msg
